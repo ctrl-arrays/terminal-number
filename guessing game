@@ -1,0 +1,33 @@
+import random
+
+# This is the main function where game runs
+def main():
+    print("Welcome to the Guessing Game!")
+    print("I'm thinking of a number between 1 and 100.")
+# Random number between 1 and 100
+    number_to_guess = random.randint(1, 100)
+# Keeps track of attempts  
+    attempts = 0
+# Start infinite loop that only breaks when correct number is guessed
+    while True:
+        try:
+            # Ask user for input and convert to integer
+            guess = int(input("Enter your guess: "))
+            # Add one to the number of attempts
+            attempts += 1
+            # Check if guess is too low
+            if guess < number_to_guess:
+                print("Too low. Try again.")
+            # Check if guess is too high
+            elif guess > number_to_guess:
+                print("Too high. Try again.")
+            # If guess is correct, congratulate user and break loop
+            else:
+                print(f"Correct! You guessed the number in {attempts} attempts.")
+                break
+        # If user enters something not a number, show error
+        except ValueError:
+            print("Please enter valid number.")
+# Ensures game runs only when script is executed directly
+if __name__ == "__main__":
+    main()
