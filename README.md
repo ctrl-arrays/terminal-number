@@ -1,1 +1,1 @@
-# terminal-number
+This is a simple Python terminal game were the computer picks a random number between 1 and 100. After each guess the game gives feedback, whether guess is too high, low or correct. It keeps track of how many attempts it takes the player to win.
